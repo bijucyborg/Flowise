@@ -577,7 +577,7 @@ export class App {
         const uiBuildPath = path.join(packagePath, 'build')
         const uiHtmlPath = path.join(packagePath, 'build', 'index.html')
 
-        this.app.use('/', express.static(uiBuildPath))
+        this.app.use('/flowise', express.static(uiBuildPath))
 
         // All other requests not handled will return React app
         this.app.use((req, res) => {
